@@ -1,5 +1,5 @@
 * {
-  border: 2px solid red;  
+  /* border: 2px solid red;   */
 }
 
 body {
@@ -14,10 +14,11 @@ body {
 
 .scoreboard {
   display: flex;
+  float: center;
   /* margin-bottom: 10px; */
   height: 120px;
   /* width: 300px; */
-  width: 50vh;
+  width: 100vw;
 }
 
 #gameboard {
@@ -78,8 +79,13 @@ body {
 
 #score-1 {
   margin-left: 10px;
-  margin-right: 35px;
 }
+
+#score-2 {
+  /* margin-left: 172px; */
+  margin-left: 18vw;
+}
+
 .scoretext {
   font-family: "Courier New", Monospace ;
   font-size: 2.5em;
@@ -88,9 +94,10 @@ body {
 }
 
 #player-1 {
-  margin: 10px 5px 10px 0px;
+  margin: 10px 5px 10px 25vw;
 }
 
 #player-2 {
   margin: 10px 5px 10px 10px;
+  float: right;
 }

@@ -8,17 +8,9 @@ const startCells = [
 let go = "circle"
 info.textContent = "Circle goes first"
 
-function createBoard() {
-  startCells.forEach((_cell, index) => {
-    const cellElement = document.createElement('div')
-    cellElement.classList.add('square')
-    cellElement.id = index
-    cellElement.addEventListener(
-      'click', addGo
-    )
-    gameBoard.append(cellElement)
-  })
-};
+let score = 0;
+let p1Score = 0;
+let p2Score = 0;
 
 function resetBoard() {
   while (gameBoard.firstChild) {
@@ -30,6 +22,13 @@ function resetBoard() {
   info.textContent = "Circle goes first"
 }
 
+function writeScore() {
+  document.getElementById("score-1").innerHTML = p1Score
+  document.getElementById("score-2").innerHTML = p2Score
+}
+
+writeScore()
+
 function addGo(e) {
   const goDisplay = document.createElement('div')
   goDisplay.classList.add(go)
@@ -37,8 +36,12 @@ function addGo(e) {
   go = go === "circle" ? "cross" : "circle"
   info.textContent = `It is now ${go}'s turn`
   e.target.removeEventListener("click", addGo)
+  /* console.log(p1Score, p2Score) */
+  checkFull()
   checkScore()
+  writeScore()
 }
+
 
 function checkScore() {
   const allSquares = document.querySelectorAll(".square")
@@ -54,6 +57,8 @@ function checkScore() {
       allSquares[cell].firstChild?.classList.contains('circle'))
     if (circleWins) {
       info.textContent = "Circle Wins!"
+      p1Score++
+      writeScore()
       allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
       return
     }
@@ -65,11 +70,44 @@ function checkScore() {
       allSquares[cell].firstChild?.classList.contains('cross'))
     if (circleWins) {
       info.textContent = "Cross Wins!"
+      p2Score++;
+      writeScore()
       allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
       return
     }
   })
+  return 0
 
 }
+
+function checkFull() {
+  const allSquares = document.querySelectorAll(".square")
+  let childs = 0
+  allSquares.forEach(square => {
+    if (square.hasChildNodes()) {
+      childs++
+    }
+  });
+
+  if (childs == 9) {
+    info.textContent = "It's a tie!"
+    return
+  }
+  
+}
+
+function createBoard() {
+  startCells.forEach((_cell, index) => {
+    const cellElement = document.createElement('div')
+    cellElement.classList.add('square')
+    cellElement.id = index
+    cellElement.addEventListener(
+      'click', addGo
+    )
+    gameBoard.append(cellElement)
+  })
+};
+
+
 
 createBoard()
