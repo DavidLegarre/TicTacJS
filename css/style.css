@@ -88,16 +88,15 @@ body {
 
 .scoretext {
   font-family: "Courier New", Monospace ;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   border: 2px solid black;
   padding: 0 10px;
 }
 
 #player-1 {
-  margin: 10px 5px 10px 25vw;
+  margin: 10px 5px 10px 30vw;
 }
 
 #player-2 {
   margin: 10px 5px 10px 10px;
-  float: right;
 }
