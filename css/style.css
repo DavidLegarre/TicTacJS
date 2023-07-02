@@ -1,20 +1,31 @@
 * {
-  /* border: 2px solid red;   */
+  border: 2px solid red;  
 }
 
-html {
-  width: 100vw;
-  height: 100vw;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center; 
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /*Scoreboard*/
 .scoreboard {
@@ -28,8 +39,8 @@ body {
 }
 
 #player-1 {
-  height: 21vh;
-  width: 21vh;
+  height: 21vw;
+  width: 21vw;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -37,8 +48,8 @@ body {
 }
 
 #player-2 {
-  height: 21vh;
-  width: 21vh;
+  height: 21vw;
+  width: 21vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,14 +71,14 @@ body {
   justify-content: center;
 }
 #score-1 {
-  width: 6vh;
-  height: 6vh;
+  width: 6vw;
+  height: 6vw;
   margin-right: 50%;
 }
 /*Gameboard*/
 #gameboard {
-  width: 63vh;
-  height: 63vh;
+  width: 63vw;
+  height: 63vw;
   background-color: black;
   border: 1px solid black;
   display:flex;
@@ -77,8 +88,8 @@ body {
 
 /*Game pieces*/
 .square {
-  width: 21vh;
-  height: 21vh;
+  width: 21vw;
+  height: 21vw;
   background-color: white;
   border: solid 2px black;
   box-sizing: border-box;
