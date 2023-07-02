@@ -33,31 +33,23 @@ body {
   float: center;
   height: 25%;
   width: 100%;
-  margin-top: 2vh;
+  margin-top: 15vmax;
   align-items: center;
   justify-content: center;
 }
 
-<<<<<<< HEAD
-#gameboard {
-  width: 300px;
-  float: right;
-  height: 300px;
-  background-color: black;
-=======
 #player-1 {
-  height: 21vw;
-  width: 21vw;
+  height: 21vmin;
+  width: 21vmin;
   align-items: center;
   justify-content: center;
->>>>>>> 5433c1c1f1bf37e8e71a3a8deb036bb4fa00bc89
   display: flex;
   margin-right: 1vw;
 }
 
 #player-2 {
-  height: 21vw;
-  width: 21vw;
+  height: 21vmin;
+  width: 21vmin;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,14 +71,14 @@ body {
   justify-content: center;
 }
 #score-1 {
-  width: 6vw;
-  height: 6vw;
+  width: 6vmin;
+  height: 6vmin;
   margin-right: 50%;
 }
 /*Gameboard*/
 #gameboard {
-  width: 63vw;
-  height: 63vw;
+  width: 57vmin;
+  height: 57vmin;
   background-color: black;
   border: 1px solid black;
   display:flex;
@@ -96,13 +88,8 @@ body {
 
 /*Game pieces*/
 .square {
-<<<<<<< HEAD
-  width: 100px;
-  height: 100px;
-=======
-  width: 21vw;
-  height: 21vw;
->>>>>>> 5433c1c1f1bf37e8e71a3a8deb036bb4fa00bc89
+  width: 19vmin;
+  height: 19vmin;
   background-color: white;
   border: solid 2px black;
   box-sizing: border-box;
@@ -112,26 +99,16 @@ body {
 }
 
 .circle {
-<<<<<<< HEAD
-  height: 90px;
-  width: 90px;
-=======
   width: 90%;
   height: 90%;
->>>>>>> 5433c1c1f1bf37e8e71a3a8deb036bb4fa00bc89
   border-radius: 50%;
   border: 15px solid blue;
   box-sizing: border-box;
 }
 
 .cross {
-<<<<<<< HEAD
-  height: 90px;
-  width: 90px;
-=======
   width: 100%;
   height: 100%;
->>>>>>> 5433c1c1f1bf37e8e71a3a8deb036bb4fa00bc89
   position: relative;
 }
 
@@ -147,48 +124,9 @@ body {
   background-color: red;
 }
 
-<<<<<<< HEAD
-.cross:before {
-  left: 50%;
-  width: 30%;
-  margin-left: -15%;
-  height: 100%;
-}
-
-.cross:after {
-  top: 50%;
-  height: 30%;
-  margin-top: -15%;
-  width: 100%;
-}
-
-#score-1 {
-  margin-left: 10px;
-}
-
-#score-2 {
-  /* margin-left: 172px; */
-  margin-left: 18vw;
-}
-
-.scoretext {
-  font-family: "Courier New", Monospace ;
-  font-size: 2.5rem;
-  border: 2px solid black;
-  padding: 0 10px;
-}
-
-#player-1 {
-  margin: 10px 5px 10px 30vw;
-}
-
-#player-2 {
-  margin: 10px 5px 10px 10px;
-=======
 .cross::before {
   transform:rotate(45deg);
 }
 .cross::after {
   transform:rotate(-45deg);
->>>>>>> 5433c1c1f1bf37e8e71a3a8deb036bb4fa00bc89
 }

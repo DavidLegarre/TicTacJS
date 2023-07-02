@@ -9,7 +9,7 @@ let go = "circle"
 info.textContent = "Circle goes first"
 
 let score = 0;
-let p1Score = 999;
+let p1Score = 0;
 let p2Score = 0;
 
 function resetBoard() {
