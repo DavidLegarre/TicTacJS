@@ -1,5 +1,5 @@
 * {
-  border: 2px solid red;  
+  /* border: 2px solid red;   */
 }
 
 html,
@@ -31,9 +31,9 @@ body {
 .scoreboard {
   display: flex;
   float: center;
-  height: 25%;
+  height: 25vmin;
   width: 100%;
-  margin-top: 15vmin;
+  margin-top: 5vmin;
   align-items: center;
   justify-content: center;
 }
