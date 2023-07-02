@@ -7,20 +7,21 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="scoreboard">
+    <div class="container">
+      <div class="scoreboard">
       <div id="player-1">
         <div class="circle"></div>
       </div>
-      <p id="score-1" class="scoretext"></p>
-      <div clas="empty-space"></div>
-      <p id="score-2" class="scoretext"></p>
+      <p id="score-1" class="scoretext center"></p>
+      <p id="score-2" class="scoretext center"></p>
       <div id="player-2">
         <div class="cross"></div>
       </div>
+      </div>
+      <div id="gameboard"></div>
+        <p id="info"></p>
+        <button type="button" onclick="resetBoard()">Play Again</button>
+      <script src="src/main.js"></script>
     </div>
-    <div id="gameboard"></div>
-    <p id="info"></p>
-    <button type="button" onclick="resetBoard()">Play Again</button>
-    <script src="src/main.js"></script>
   </body>
 </html>
